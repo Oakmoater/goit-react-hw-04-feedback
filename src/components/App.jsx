@@ -9,13 +9,6 @@ export const App = () => {
   const[neutral, setNeutral] = useState(0)
   const[bad, setBad] = useState(0)
 
-  // handleClickIncrement = (e) => {
-  //   const { name } = e.target;
-  //   this.setState((prevState) => ({
-  //     [name]: prevState[name] + 1,
-  //   }));
-  // };
-
 const handleClickIncrement = (e) => {
     const { name } = e.target;
     if (name === "good") {
@@ -28,7 +21,6 @@ const handleClickIncrement = (e) => {
   };
 
   const calculateStatistics = () => {
-    // const { good, neutral, bad } = this.state;
     const total = good + neutral + bad;
     const percentage = total > 0 ? Math.round((good / total) * 100) : 0;
     return {
